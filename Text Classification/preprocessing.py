@@ -48,16 +48,3 @@ def text_normalization(text, use_translate=True):
         text = SPACE_PATTERN.sub(' ', text)
     
     return text.strip()
-
-def text_normalization_2(text):
-    # lowercasing and punctuation removal
-    text = text.lower() # convert to lowercase
-    text = text.replace("\\", ' ') 
-    text = re.sub(r'[^\w\s]',' ', text) # remove punctuation 
-    text = re.sub(r'\s+', ' ', text) # remove any redundant spaces
-    text = text.strip()
-    return text
-
-def text_tokenization(text):
-    # split text into tokens
-    pass
